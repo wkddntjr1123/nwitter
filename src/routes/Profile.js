@@ -1,3 +1,13 @@
 import React from "react";
+import { authService } from "../firebase";
 
-export default () => <span>Profile</span>;
+const onLogout = () => {
+  authService.signOut();
+};
+
+const Profile = () => (
+  <>
+    <button onClick={onLogout}>Log Out</button>
+  </>
+);
+export default Profile;

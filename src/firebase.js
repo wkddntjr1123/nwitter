@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/firebase-firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,3 +17,9 @@ firebase.initializeApp(firebaseConfig);
 export const firebaseInstance = firebase;
 
 export const authService = firebase.auth();
+
+export const dbService = firebase.firestore();
+
+/*Collection은 폴더, Document는 문서(텍스트) 느낌.
+NoSQL데이터베이스는 Collection들을 갖고 있고, 각 Collection은 Document들을 갖고 있음.
+ */
